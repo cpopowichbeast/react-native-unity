@@ -3,9 +3,9 @@ namespace Wowmaking.RNU
     public static class RNCommunicatorFactory
     {
         private static IRNCommunicator mockCommunicator;
-        public static void SetMockCommunicator(IRNCommunicator mockCommunicator)
+        public static void SetMockCommunicator(IRNCommunicator mock)
         {
-            this.mockCommunicator = mockCommunicator;
+            mockCommunicator = mock;
         }
         public static IRNCommunicator GetCommunicator()
         {
