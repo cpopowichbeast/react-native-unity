@@ -169,24 +169,7 @@ namespace Wowmaking.RNU
 
         public static void SendMessage(String message)
         {
-#if !UNITY_EDITOR
-    #if UNITY_ANDROID
-            try
-            {
-                AndroidJavaClass jc = new AndroidJavaClass("com.wowmaking.rnunity.UnityReactActivity");
-                AndroidJavaObject unityReactActivity = jc.GetStatic<AndroidJavaObject>("instance");
-                unityReactActivity.Call("sendMessage", message);
-            }
-            catch (Exception e)
-            {
-                Debug.Log("Exception during sendMessage to UnityReactActivity");
-                Debug.Log(e.Message);
-            }
-    #elif UNITY_IOS
-            NativeAPI.sendMessage(message);
-    #endif
-#endif
-		}
-
+            Communicator.SendMessage(message);
+        }
 	}
 }
