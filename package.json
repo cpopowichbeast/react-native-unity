@@ -27,5 +27,8 @@
   "dependencies": {
     "event-target-shim": "^5.0.1",
     "xml2js": "^0.4.22"
+  },
+  "devDependencies": {
+    "@react-native-community/bob": "^0.16.2"
   }
 }

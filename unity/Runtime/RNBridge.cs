@@ -4,14 +4,6 @@ using UnityEngine;
 
 using Newtonsoft.Json.Linq;
 
-#if UNITY_IOS
-public class NativeAPI
-{
-    [DllImport("__Internal")]
-    public static extern void sendMessage(string message);
-}
-#endif
-
 namespace Wowmaking.RNU
 {
 
@@ -100,6 +92,18 @@ namespace Wowmaking.RNU
     {
 
         private static IRNCommandsReceiver commandsReceiver = null;
+        private static IRNCommunicator communicator = null;
+        private static IRNCommunicator Communicator
+        {
+            get
+            {
+                if (communicator == null)
+                {
+                    communicator = RNCommunicatorFactory.GetCommunicator();
+                }
+                return communicator;
+            }
+        }
 
         public static void SetCommandsReceiver(IRNCommandsReceiver cReceiver)
         {
