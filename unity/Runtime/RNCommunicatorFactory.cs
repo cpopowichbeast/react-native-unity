@@ -10,7 +10,7 @@ namespace Wowmaking.RNU
         public static IRNCommunicator GetCommunicator()
         {
 #if UNITY_EDITOR
-            return new mockCommunicator;
+            return mockCommunicator;
 #elif UNITY_IOS
             return new IOSRNCommunicator();
 #elif UNITY_ANDROID
