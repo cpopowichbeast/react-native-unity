@@ -14,8 +14,8 @@ import com.facebook.react.ReactActivity;
 import com.unity3d.player.IUnityPlayerLifecycleEvents;
 import com.unity3d.player.UnityPlayer;
 
-public class UnityReactActivity extends ReactActivity implements IUnityPlayerLifecycleEvents {
-    public static UnityReactActivity instance = null;
+public class OldUnityReactActivity extends ReactActivity implements IUnityPlayerLifecycleEvents {
+    public static OldUnityReactActivity instance = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
