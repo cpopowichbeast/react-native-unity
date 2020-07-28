@@ -17,7 +17,7 @@ import com.unity3d.player.UnityPlayer;
 public class UnityReactActivity extends ReactActivity implements IUnityPlayerLifecycleEvents {
     public static UnityReactActivity instance = null;
 
-    protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
+    public static UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
     // Override this in your custom UnityPlayerActivity to tweak the command line arguments passed to the Unity Android Player
     // The command line arguments are passed as a string, separated by spaces
