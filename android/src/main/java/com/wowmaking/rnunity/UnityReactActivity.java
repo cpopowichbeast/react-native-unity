@@ -49,16 +49,19 @@ public class UnityReactActivity extends ReactActivity implements IUnityPlayerLif
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
 
-        //FrameLayout rootLayout = (FrameLayout) findViewById(android.R.id.content); //new
+        FrameLayout rootLayout = (FrameLayout) findViewById(android.R.id.content); //new
+        
 
         String cmdLine = updateUnityCommandLineArguments(getIntent().getStringExtra("unity"));
         getIntent().putExtra("unity", cmdLine);
 
         mUnityPlayer = new UnityPlayer(this, this);
-        //rootLayout.addView(mUnityPlayer, 0); //new
+        rootLayout.addView(mUnityPlayer, 0); //new
         mUnityPlayer.getView().setLayerType(View.LAYER_TYPE_NONE, null); //new
-        setContentView(mUnityPlayer); //old
+        //setContentView(mUnityPlayer); //old
         mUnityPlayer.requestFocus();
+
+        instance = this;
     }
 
     // When Unity player unloaded move task to background
