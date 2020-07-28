@@ -8,6 +8,7 @@ public class UnityResponderView extends View {
 
     public UnityResponderView(Context context) {
         super(context);
+        requestFocus();
     }
 
     @Override
