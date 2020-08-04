@@ -2,6 +2,7 @@ import {
   NativeModules,
   requireNativeComponent,
   NativeEventEmitter,
+  ViewPropTypes
 } from 'react-native';
 
 import { EventTarget, } from 'event-target-shim';
