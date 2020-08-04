@@ -206,7 +206,14 @@ class UnityCommand {
 
 }
 
+var viewProps = {
+  name: 'UnityResponderView',
+  propTypes: {
+    ...ViewPropTypes
+  }
+}
+
 const Unity = new UnityManager();
-const UnityResponderView = requireNativeComponent('UnityResponderView');
+const UnityResponderView = requireNativeComponent('UnityResponderView', viewProps);
 
 export { Unity, UnityResponderView, }
