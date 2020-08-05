@@ -1,0 +1,1 @@
+declare module '@wowmaking/react-native-unity';
